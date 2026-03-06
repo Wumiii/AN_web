@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Minute Note — Your AI Scribe for Every Word</title>
+  <meta name="description" content="Real-time transcription & Gemini 3 powered summaries. Never miss a word, in any meeting, anywhere." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================
+       NAV
+  ============================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+          <div class="logo-icon">
+            <img src="assets/logo.png" alt="AI Minute Note Logo" width="26" height="26" style="display:block;border-radius:4px;" />
+          </div>
+          <span>AI Minute Note</span>
+        </a>
+      <ul class="nav-links">
+        <li><a href="#use-cases">Use Cases</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-ghost">Pricing</a>
+        <a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8 12l2 2 4-4"/></svg>
+          Download Free
+        </a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="#use-cases">Use Cases</a>
+      <a href="#features">Features</a>
+      <a href="#security">Security</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:8px">Download Free</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==============================
+         HERO
+    ============================== -->
+    <section class="hero" id="hero">
+      <!-- Background orbs -->
+      <div class="hero-bg">
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-teal"></div>
+        <div class="noise-overlay"></div>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Left: Copy -->
+        <div class="hero-copy reveal">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>Powered by Gemini 3</span>
+          </div>
+          <h1 class="hero-headline">
+            Your AI Scribe<br/>
+            for <span class="gradient-text">Every Word.</span>
+          </h1>
+          <p class="hero-sub">
+            Real-time transcription &amp; Gemini 3 powered summaries.<br/>
+            Transform every meeting into structured insight — instantly.
+          </p>
+
+          <!-- CTA Group -->
+          <div class="hero-cta-group">
+            <a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener" class="app-store-btn">
+              <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <div class="btn-text-block">
+                <span class="download-label">Download on the</span>
+                <span class="store-label">App Store</span>
+              </div>
+            </a>
+
+            <div class="qr-wrapper">
+              <button class="qr-trigger" id="qrTrigger">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1"/>
+                  <path d="M14 14h2v2h-2zM18 14h3M14 18h2M18 18h3M14 21h3v-2"/>
+                </svg>
+                Scan QR Code
+              </button>
+              <div class="qr-popup" id="qrPopup">
+                <div class="qr-popup-inner">
+                  <p class="qr-title">Scan to Download</p>
+                  <div class="qr-code-wrap">
+                    <!-- SVG QR Code placeholder -->
+                    <svg class="qr-svg" viewBox="0 0 100 100" width="140" height="140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Top-left finder -->
+                      <rect x="5" y="5" width="28" height="28" rx="3" fill="#0F172A"/>
+                      <rect x="9" y="9" width="20" height="20" rx="2" fill="#F8FAFC"/>
+                      <rect x="13" y="13" width="12" height="12" rx="1" fill="#0F172A"/>
+                      <!-- Top-right finder -->
+                      <rect x="67" y="5" width="28" height="28" rx="3" fill="#0F172A"/>
+                      <rect x="71" y="9" width="20" height="20" rx="2" fill="#F8FAFC"/>
+                      <rect x="75" y="13" width="12" height="12" rx="1" fill="#0F172A"/>
+                      <!-- Bottom-left finder -->
+                      <rect x="5" y="67" width="28" height="28" rx="3" fill="#0F172A"/>
+                      <rect x="9" y="71" width="20" height="20" rx="2" fill="#F8FAFC"/>
+                      <rect x="13" y="75" width="12" height="12" rx="1" fill="#0F172A"/>
+                      <!-- Data modules -->
+                      <rect x="39" y="5" width="5" height="5" fill="#0F172A"/><rect x="47" y="5" width="5" height="5" fill="#0F172A"/>
+                      <rect x="55" y="5" width="5" height="5" fill="#0F172A"/><rect x="39" y="13" width="5" height="5" fill="#0F172A"/>
+                      <rect x="47" y="13" width="5" height="5" fill="#0F172A"/><rect x="55" y="21" width="5" height="5" fill="#0F172A"/>
+                      <rect x="39" y="21" width="5" height="5" fill="#0F172A"/><rect x="5" y="39" width="5" height="5" fill="#0F172A"/>
+                      <rect x="13" y="39" width="5" height="5" fill="#0F172A"/><rect x="21" y="39" width="5" height="5" fill="#0F172A"/>
+                      <rect x="39" y="39" width="5" height="5" fill="#0F172A"/><rect x="47" y="39" width="5" height="5" fill="#0F172A"/>
+                      <rect x="55" y="39" width="5" height="5" fill="#0F172A"/><rect x="63" y="39" width="5" height="5" fill="#0F172A"/>
+                      <rect x="79" y="39" width="5" height="5" fill="#0F172A"/><rect x="87" y="39" width="5" height="5" fill="#0F172A"/>
+                      <rect x="5" y="47" width="5" height="5" fill="#0F172A"/><rect x="21" y="47" width="5" height="5" fill="#0F172A"/>
+                      <rect x="39" y="47" width="5" height="5" fill="#0F172A"/><rect x="55" y="47" width="5" height="5" fill="#0F172A"/>
+                      <rect x="71" y="47" width="5" height="5" fill="#0F172A"/><rect x="87" y="47" width="5" height="5" fill="#0F172A"/>
+                      <rect x="5" y="55" width="5" height="5" fill="#0F172A"/><rect x="13" y="55" width="5" height="5" fill="#0F172A"/>
+                      <rect x="29" y="55" width="5" height="5" fill="#0F172A"/><rect x="47" y="55" width="5" height="5" fill="#0F172A"/>
+                      <rect x="63" y="55" width="5" height="5" fill="#0F172A"/><rect x="79" y="55" width="5" height="5" fill="#0F172A"/>
+                      <rect x="39" y="63" width="5" height="5" fill="#0F172A"/><rect x="55" y="63" width="5" height="5" fill="#0F172A"/>
+                      <rect x="71" y="63" width="5" height="5" fill="#0F172A"/><rect x="47" y="71" width="5" height="5" fill="#0F172A"/>
+                      <rect x="63" y="71" width="5" height="5" fill="#0F172A"/><rect x="79" y="71" width="5" height="5" fill="#0F172A"/>
+                      <rect x="87" y="71" width="5" height="5" fill="#0F172A"/><rect x="39" y="79" width="5" height="5" fill="#0F172A"/>
+                      <rect x="55" y="79" width="5" height="5" fill="#0F172A"/><rect x="71" y="79" width="5" height="5" fill="#0F172A"/>
+                      <rect x="47" y="87" width="5" height="5" fill="#0F172A"/><rect x="63" y="87" width="5" height="5" fill="#0F172A"/>
+                      <rect x="87" y="87" width="5" height="5" fill="#0F172A"/>
+                    </svg>
+                  </div>
+                  <p class="qr-hint">Point your iPhone camera at this code</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-val">99.2%</span>
+              <span class="stat-lbl">Accuracy</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-val">99</span>
+              <span class="stat-lbl">Languages</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-val">10M+</span>
+              <span class="stat-lbl">Hours Transcribed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: iPhone Mockup -->
+        <div class="hero-visual reveal reveal-delay">
+          <div class="phone-scene">
+            <div class="phone-glow"></div>
+
+            <div class="iphone-16pro">
+              <div class="iphone-frame">
+                <div class="btn-action"></div>
+                <div class="btn-vol btn-vol-up"></div>
+                <div class="btn-vol btn-vol-dn"></div>
+                <div class="btn-power"></div>
+                <div class="iphone-bottom-bar"></div>
+
+                <div class="iphone-screen app-ui-screen">
+                  <div class="dynamic-island"></div>
+
+                  <!-- ── SCREEN 1: RECORDING ── -->
+                  <div class="ui-screen ui-s1 ui-active" id="uiS1">
+                    <div class="ui-nav">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                      <span class="ui-nav-title">MinuteNote</span>
+                      <span style="width:18px"></span>
+                    </div>
+                    <div class="ui-record-area">
+                      <div class="ui-rec-ring ui-ring-outer"></div>
+                      <div class="ui-rec-ring ui-ring-inner"></div>
+                      <div class="ui-rec-btn">
+                        <img src="assets/logo.png" width="44" height="44" style="border-radius:8px;display:block;" alt="logo"/>
+                      </div>
+                    </div>
+                    <div class="ui-timer">00:23</div>
+                    <div class="ui-rec-label">
+                      <span class="ui-rec-dot-live"></span>Recording...
+                    </div>
+                    <div class="ui-waveform-row">
+                      <div class="ui-wv" style="--wh:35%"></div><div class="ui-wv" style="--wh:60%"></div>
+                      <div class="ui-wv" style="--wh:80%"></div><div class="ui-wv" style="--wh:50%"></div>
+                      <div class="ui-wv" style="--wh:90%"></div><div class="ui-wv" style="--wh:65%"></div>
+                      <div class="ui-wv" style="--wh:45%"></div><div class="ui-wv" style="--wh:75%"></div>
+                      <div class="ui-wv" style="--wh:55%"></div><div class="ui-wv" style="--wh:85%"></div>
+                      <div class="ui-wv" style="--wh:40%"></div><div class="ui-wv" style="--wh:70%"></div>
+                      <div class="ui-wv" style="--wh:95%"></div><div class="ui-wv" style="--wh:55%"></div>
+                      <div class="ui-wv" style="--wh:65%"></div><div class="ui-wv" style="--wh:45%"></div>
+                    </div>
+                    <div class="ui-lang-row">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B6DEC" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+                      <span>Prompt &amp; Language</span>
+                    </div>
+                    <div class="ui-cta-btn">Transcribe &amp; Summarize</div>
+                  </div>
+
+                  <!-- ── SCREEN 2: PROCESSING ── -->
+                  <div class="ui-screen ui-s2" id="uiS2">
+                    <div class="ui-nav">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                      <span class="ui-nav-title">MinuteNote</span>
+                      <span style="width:18px"></span>
+                    </div>
+                    <div class="ui-progress-card">
+                      <div class="ui-pstep ui-done">
+                        <div class="ui-picon ui-picon-done">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>Processing Audio</span>
+                      </div>
+                      <div class="ui-pstep ui-done">
+                        <div class="ui-picon ui-picon-done">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>Transcribing</span>
+                      </div>
+                      <div class="ui-transcript-snippet">
+                        The engineering team reported 85% completion of the core feature development, with remaining tasks...
+                      </div>
+                      <div class="ui-pstep ui-done">
+                        <div class="ui-picon ui-picon-done">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span>Identifying Speakers</span>
+                      </div>
+                      <div class="ui-pstep ui-active-step">
+                        <div class="ui-picon ui-picon-spin">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5B6DEC" stroke-width="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                        </div>
+                        <span>Taking Notes</span>
+                        <span class="ui-pct">55%</span>
+                      </div>
+                      <div class="ui-pstep ui-pending">
+                        <div class="ui-picon ui-picon-pending">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C0C8D8" stroke-width="2"><circle cx="12" cy="12" r="8"/></svg>
+                        </div>
+                        <span>Finishing Touches</span>
+                      </div>
+                    </div>
+                    <p class="ui-hint">For longer recordings, this might take a minute or two. Don't leave the page.</p>
+                  </div>
+
+                  <!-- ── SCREEN 3: SUMMARY ── -->
+                  <div class="ui-screen ui-s3" id="uiS3">
+                    <div class="ui-nav">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                      <span class="ui-nav-title">MinuteNote</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6DEC" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="ui-meeting-card">
+                      <div class="ui-meeting-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B6DEC" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                      </div>
+                      <div>
+                        <p class="ui-meeting-title">Q4 Planning Meeting</p>
+                        <p class="ui-meeting-date">2026/03/06 · 09:41</p>
+                      </div>
+                    </div>
+                    <div class="ui-tabs">
+                      <div class="ui-tab ui-tab-active">Minutes</div>
+                      <div class="ui-tab">Transcript</div>
+                      <div class="ui-tab">Raw Text</div>
+                    </div>
+                    <div class="ui-summary-body">
+                      <p class="ui-sum-heading">Core Conclusions</p>
+                      <p class="ui-sum-text">Team reviewed Q4 roadmap. Key decisions made on hiring plan and OKR alignment across product and engineering.</p>
+                      <p class="ui-sum-heading">Action Items</p>
+                      <div class="ui-action-item">
+                        <div class="ui-ai-dot" style="background:#5B6DEC"></div>
+                        <span>Define Q4 OKRs by Friday</span>
+                      </div>
+                      <div class="ui-action-item">
+                        <div class="ui-ai-dot" style="background:#5B6DEC"></div>
+                        <span>Share updated hiring plan</span>
+                      </div>
+                      <div class="ui-action-item">
+                        <div class="ui-ai-dot" style="background:#5B6DEC"></div>
+                        <span>Review budget with CFO</span>
+                      </div>
+                    </div>
+                    <div class="ui-ai-fab">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                  </div>
+
+                  <!-- Home indicator -->
+                  <div class="ui-home-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Cards -->
+            <div class="float-card float-card-left" id="fcLeft">
+              <div class="fc-icon fc-icon-red" id="fcLeftIcon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              </div>
+              <div>
+                <p class="fc-label" id="fcLeftLabel">Recording</p>
+                <p class="fc-value" id="fcLeftVal">00:23</p>
+              </div>
+            </div>
+
+            <div class="float-card float-card-right" id="fcRight">
+              <div class="fc-icon fc-icon-green" id="fcRightIcon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <p class="fc-label" id="fcRightLabel">Accuracy</p>
+                <p class="fc-value" id="fcRightVal">99.2%</p>
+              </div>
+            </div>
+
+            <div class="float-card float-card-bottom" id="fcBottom">
+              <div class="fc-icon fc-icon-purple" id="fcBottomIcon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <p class="fc-label" id="fcBottomLabel">AI Summary</p>
+                <p class="fc-value" id="fcBottomVal">Ready ✓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         USE CASES
+    ============================== -->
+    <section class="use-cases" id="use-cases">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Use Cases</span>
+          <h2 class="section-title">Built for Every Conversation<br/>That Matters</h2>
+          <p class="section-sub">From boardrooms to breaking news — AI Minute Note adapts to your world.</p>
+        </div>
+
+        <div class="use-cases-grid">
+          <!-- Card 1: Global Teams -->
+          <div class="use-card reveal">
+            <div class="use-card-icon" style="--icon-color: #8B5CF6; --icon-bg: rgba(139,92,246,0.12)">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <div class="use-card-tag">Global Teams</div>
+            <h3 class="use-card-title">Collaborate Across Time Zones &amp; Languages</h3>
+            <p class="use-card-desc">Support for 99+ languages with real-time translation summaries. Teammates in Tokyo, London, and New York all get the same crystal-clear record.</p>
+            <div class="use-card-features">
+              <span class="use-feat">99+ Languages</span>
+              <span class="use-feat">Auto-translate</span>
+              <span class="use-feat">Async Share</span>
+            </div>
+            <div class="use-card-visual global-visual">
+              <div class="globe-ring ring-1"></div>
+              <div class="globe-ring ring-2"></div>
+              <div class="globe-ring ring-3"></div>
+              <div class="city-dot" style="top:30%;left:20%"><span>NYC</span></div>
+              <div class="city-dot" style="top:25%;left:55%"><span>LDN</span></div>
+              <div class="city-dot" style="top:40%;left:80%"><span>TYO</span></div>
+            </div>
+          </div>
+
+          <!-- Card 2: Boardroom -->
+          <div class="use-card reveal reveal-delay">
+            <div class="use-card-icon" style="--icon-color: #3B82F6; --icon-bg: rgba(59,130,246,0.12)">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div class="use-card-tag">Boardroom</div>
+            <h3 class="use-card-title">Enterprise-Grade Minutes for Critical Decisions</h3>
+            <p class="use-card-desc">Auto-generate structured meeting minutes with speaker attribution, action items, and timeline. Export to PDF or share via secure link — board-ready in seconds.</p>
+            <div class="use-card-features">
+              <span class="use-feat">Auto Minutes</span>
+              <span class="use-feat">Action Items</span>
+              <span class="use-feat">PDF Export</span>
+            </div>
+            <div class="use-card-visual board-visual">
+              <div class="doc-mock">
+                <div class="doc-line doc-heading"></div>
+                <div class="doc-line doc-short"></div>
+                <div class="doc-line doc-full"></div>
+                <div class="doc-line doc-med"></div>
+                <div class="doc-line doc-full"></div>
+                <div class="doc-check"><span>✓</span><div class="doc-line doc-short" style="flex:1"></div></div>
+                <div class="doc-check"><span>○</span><div class="doc-line doc-med" style="flex:1"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Journalism -->
+          <div class="use-card reveal reveal-delay-2">
+            <div class="use-card-icon" style="--icon-color: #10B981; --icon-bg: rgba(16,185,129,0.12)">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+            </div>
+            <div class="use-card-tag">Journalism</div>
+            <h3 class="use-card-title">Interview Anywhere, Transcribe Instantly</h3>
+            <p class="use-card-desc">Record interviews on the go — in noisy environments, over phone calls, or in person. AI extracts key quotes and context so you can focus on the story, not the typing.</p>
+            <div class="use-card-features">
+              <span class="use-feat">Noise Cancellation</span>
+              <span class="use-feat">Quote Extract</span>
+              <span class="use-feat">Offline Mode</span>
+            </div>
+            <div class="use-card-visual journalism-visual">
+              <div class="mic-anim">
+                <div class="mic-body">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/>
+                    <line x1="8" y1="23" x2="16" y2="23"/>
+                  </svg>
+                </div>
+                <div class="mic-wave mw-1"></div>
+                <div class="mic-wave mw-2"></div>
+                <div class="mic-wave mw-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         VIDEO DEMO
+    ============================== -->
+    <section class="video-demo" id="demo">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Product Demo</span>
+          <h2 class="section-title">See It in Action</h2>
+          <p class="section-sub">Watch how AI Minute Note transforms a live meeting into structured notes in real-time.</p>
+        </div>
+
+        <div class="video-wrapper reveal">
+          <!-- Glow backdrop -->
+          <div class="video-glow"></div>
+
+          <!-- Video frame -->
+          <div class="video-frame" id="videoFrame">
+            <!-- Custom play overlay -->
+            <div class="video-overlay" id="videoOverlay">
+              <div class="play-ring">
+                <button class="play-btn" id="playBtn" aria-label="Play demo video">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5.14v14l11-7-11-7z"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="play-label">Watch Full Demo</p>
+            </div>
+
+            <video
+              id="demoVideo"
+              class="demo-video"
+              src="assets/demo.mp4"
+              preload="metadata"
+              playsinline
+              poster=""
+            ></video>
+
+            <!-- Custom controls bar -->
+            <div class="video-controls" id="videoControls">
+              <button class="vc-btn vc-play-pause" id="vcPlayPause" aria-label="Play/Pause">
+                <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v14l11-7-11-7z"/></svg>
+                <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+              </button>
+
+              <div class="vc-progress-wrap" id="vcProgressWrap">
+                <div class="vc-progress-bg">
+                  <div class="vc-progress-fill" id="vcFill"></div>
+                  <div class="vc-progress-thumb" id="vcThumb"></div>
+                </div>
+              </div>
+
+              <span class="vc-time" id="vcTime">0:00 / 0:00</span>
+
+              <button class="vc-btn vc-mute" id="vcMute" aria-label="Mute">
+                <svg class="icon-vol" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <svg class="icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              </button>
+
+              <button class="vc-btn vc-fullscreen" id="vcFullscreen" aria-label="Fullscreen">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Feature chips below video -->
+          <div class="video-chips">
+            <div class="vchip">
+              <span class="vchip-dot" style="background:#8B5CF6"></span>
+              Real-time Transcription
+            </div>
+            <div class="vchip">
+              <span class="vchip-dot" style="background:#06B6D4"></span>
+              Speaker Diarization
+            </div>
+            <div class="vchip">
+              <span class="vchip-dot" style="background:#10B981"></span>
+              AI Summary
+            </div>
+            <div class="vchip">
+              <span class="vchip-dot" style="background:#F59E0B"></span>
+              Action Items
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         FEATURES — BENTO GRID
+    ============================== -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Features</span>
+          <h2 class="section-title">Everything You Need.<br/>Nothing You Don't.</h2>
+          <p class="section-sub">A tightly crafted feature set designed for how you actually work.</p>
+        </div>
+
+        <div class="bento-grid">
+
+          <!-- ① Smart Transcription — 2/3 width, tall -->
+          <div class="bento-card reveal" data-accent="#8B5CF6" style="grid-column:span 2; grid-row:span 1;">
+            <div class="bento-inner-h">
+              <div class="bento-text-col">
+                <div class="bento-icon" style="--c:#8B5CF6">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+                </div>
+                <h3 class="bento-title">Smart Transcription</h3>
+                <p class="bento-desc">Industry-leading accuracy powered by Gemini 3. Handles accents, technical jargon, and multiple dialects — live as you speak.</p>
+                <div class="bento-tags">
+                  <span>Real-time</span><span>Multi-dialect</span><span>99 Languages</span><span>Noise Cancellation</span>
+                </div>
+                <div class="bento-stat-row">
+                  <div class="bento-stat">
+                    <span class="bs-val">99.2%</span>
+                    <span class="bs-lbl">Accuracy</span>
+                  </div>
+                  <div class="bento-stat">
+                    <span class="bs-val">&lt;300ms</span>
+                    <span class="bs-lbl">Latency</span>
+                  </div>
+                  <div class="bento-stat">
+                    <span class="bs-val">99</span>
+                    <span class="bs-lbl">Languages</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bento-wave-col">
+                <div class="big-waveform">
+                  <div class="bw-bar" style="--bh:30%"></div>
+                  <div class="bw-bar" style="--bh:55%"></div>
+                  <div class="bw-bar" style="--bh:75%"></div>
+                  <div class="bw-bar" style="--bh:45%"></div>
+                  <div class="bw-bar" style="--bh:90%"></div>
+                  <div class="bw-bar" style="--bh:60%"></div>
+                  <div class="bw-bar" style="--bh:80%"></div>
+                  <div class="bw-bar" style="--bh:40%"></div>
+                  <div class="bw-bar" style="--bh:70%"></div>
+                  <div class="bw-bar" style="--bh:50%"></div>
+                  <div class="bw-bar" style="--bh:85%"></div>
+                  <div class="bw-bar" style="--bh:35%"></div>
+                  <div class="bw-bar" style="--bh:65%"></div>
+                  <div class="bw-bar" style="--bh:95%"></div>
+                  <div class="bw-bar" style="--bh:50%"></div>
+                  <div class="bw-bar" style="--bh:70%"></div>
+                  <div class="bw-bar" style="--bh:40%"></div>
+                  <div class="bw-bar" style="--bh:80%"></div>
+                </div>
+                <div class="bento-transcript-preview">
+                  <div class="btp-line">
+                    <span class="btp-dot" style="background:#8B5CF6"></span>
+                    <span class="btp-text">"The Q3 growth exceeded all projections by—"</span>
+                  </div>
+                  <div class="btp-line btp-active">
+                    <span class="btp-dot" style="background:#06B6D4"></span>
+                    <span class="btp-text">"Agreed. We should fast-track the roadmap<span class="cursor-blink">|</span>"</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ② AI Insight — 1/3 width -->
+          <div class="bento-card reveal reveal-delay" data-accent="#06B6D4" style="grid-column:span 1;">
+            <div class="bento-icon" style="--c:#06B6D4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="bento-title">AI Insight</h3>
+            <p class="bento-desc">Gemini 3 auto-generates summaries, to-dos, and meeting timelines the moment you stop recording.</p>
+            <div class="ai-output-stack">
+              <div class="ao-item">
+                <div class="ao-icon" style="--ac:#06B6D4">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div>
+                  <p class="ao-label">Summary</p>
+                  <div class="ao-bars"><div style="width:85%"></div><div style="width:65%"></div></div>
+                </div>
+              </div>
+              <div class="ao-item">
+                <div class="ao-icon" style="--ac:#8B5CF6">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <div>
+                  <p class="ao-label">Action Items</p>
+                  <div class="ao-todos">
+                    <div class="ao-todo done">Review Q3 report</div>
+                    <div class="ao-todo">Define Q4 OKRs</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ao-item">
+                <div class="ao-icon" style="--ac:#10B981">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="ao-label">Timeline</p>
+                  <div class="ao-timeline">
+                    <div class="ao-tl-dot" style="background:#10B981"></div>
+                    <div class="ao-tl-line"></div>
+                    <div class="ao-tl-dot" style="background:#06B6D4"></div>
+                    <div class="ao-tl-line"></div>
+                    <div class="ao-tl-dot" style="background:#8B5CF6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ③ Speaker Diarization — Full width, horizontal -->
+          <div class="bento-card reveal" data-accent="#10B981" style="grid-column:span 3;">
+            <div class="bento-inner-h bento-diar">
+              <div class="bento-text-col bento-text-col-sm">
+                <div class="bento-icon" style="--c:#10B981">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 class="bento-title">Speaker Diarization</h3>
+                <p class="bento-desc">Voiceprint AI identifies who said what. Every line is attributed to the right speaker — reads exactly like a screenplay.</p>
+                <div class="bento-tags">
+                  <span>Voice Fingerprint</span><span>Up to 8 Speakers</span><span>Real-time</span>
+                </div>
+              </div>
+              <div class="diar-visual-col">
+                <div class="diar-script">
+                  <div class="ds-line">
+                    <div class="ds-speaker">
+                      <div class="ds-avatar" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">S</div>
+                      <span class="ds-name">Sarah</span>
+                    </div>
+                    <div class="ds-bubble ds-bubble-purple">"Q3 numbers are up 34%. The new pricing model is working."</div>
+                  </div>
+                  <div class="ds-line">
+                    <div class="ds-speaker">
+                      <div class="ds-avatar" style="background:linear-gradient(135deg,#0891B2,#0E7490)">J</div>
+                      <span class="ds-name">James</span>
+                    </div>
+                    <div class="ds-bubble ds-bubble-cyan">"Agreed. Let's fast-track Q4 hiring before the board review."</div>
+                  </div>
+                  <div class="ds-line ds-line-active">
+                    <div class="ds-speaker">
+                      <div class="ds-avatar" style="background:linear-gradient(135deg,#059669,#047857)">Y</div>
+                      <span class="ds-name">You</span>
+                    </div>
+                    <div class="ds-bubble ds-bubble-teal">"I'll draft the OKRs and share by Friday<span class="cursor-blink">|</span>"</div>
+                  </div>
+                </div>
+                <div class="diar-legend">
+                  <div class="dl-item"><div class="dl-dot" style="background:#8B5CF6"></div>Sarah K.</div>
+                  <div class="dl-item"><div class="dl-dot" style="background:#06B6D4"></div>James L.</div>
+                  <div class="dl-item"><div class="dl-dot" style="background:#10B981"></div>You</div>
+                  <div class="dl-accuracy">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Voice matched · 3 speakers detected
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         TESTIMONIALS
+    ============================== -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">Loved by Professionals<br/>Around the World</h2>
+          <p class="section-sub">From solo journalists to Fortune 500 boardrooms — see what our users say.</p>
+        </div>
+
+        <div class="testi-grid">
+          <!-- Card 1 -->
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"We run 40+ cross-timezone standups every week. AI Minute Note has eliminated our entire manual note-taking process. The speaker diarization is eerily accurate."</p>
+            <div class="testi-author">
+              <div class="testi-avatar av-purple">MK</div>
+              <div>
+                <p class="testi-name">Michael K.</p>
+                <p class="testi-role">VP Engineering · Stripe</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 — featured/large -->
+          <div class="testi-card testi-featured reveal reveal-delay">
+            <div class="testi-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Editor's Choice
+            </div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"I've tried every transcription app out there. Nothing comes close to the accuracy, the UI, or the AI summaries this delivers. It's the only tool that actually understands context."</p>
+            <div class="testi-author">
+              <div class="testi-avatar av-cyan">SR</div>
+              <div>
+                <p class="testi-name">Sarah R.</p>
+                <p class="testi-role">Senior Correspondent · Reuters</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testi-card reveal reveal-delay">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Board meetings used to generate 10 pages of raw notes nobody read. Now we get a one-page structured summary with action items in under 30 seconds. Transformative."</p>
+            <div class="testi-author">
+              <div class="testi-avatar av-teal">JL</div>
+              <div>
+                <p class="testi-name">James L.</p>
+                <p class="testi-role">Chief of Staff · Fortune 500</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"As a researcher, I conduct 20+ interviews a month. The offline mode and on-device processing means I can work in the field without worrying about data privacy. Essential."</p>
+            <div class="testi-author">
+              <div class="testi-avatar av-amber">AP</div>
+              <div>
+                <p class="testi-name">Dr. Aisha P.</p>
+                <p class="testi-role">Research Lead · MIT Media Lab</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="testi-card reveal reveal-delay">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"我们的团队跨越上海、伦敦和纽约三个时区开会。多语言支持和自动翻译摘要功能彻底改变了我们的协作方式。强烈推荐！"</p>
+            <div class="testi-author">
+              <div class="testi-avatar av-blue">ZW</div>
+              <div>
+                <p class="testi-name">Zhang Wei</p>
+                <p class="testi-role">Product Director · ByteDance</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="testi-card reveal reveal-delay-2">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"The Gemini 3 summaries aren't just accurate — they're smart. It knows which decisions were made, who owns each action item, and even surfaces risks I might have glossed over."</p>
+            <div class="testi-author">
+              <div class="testi-avatar av-purple">NM</div>
+              <div>
+                <p class="testi-name">Nina M.</p>
+                <p class="testi-role">Founder &amp; CEO · Series B Startup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SECURITY & TRUST
+    ============================== -->
+    <section class="security" id="security">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Security &amp; Trust</span>
+          <h2 class="section-title">Enterprise-Grade Privacy.<br/>By Design, Not Afterthought.</h2>
+          <p class="section-sub">Your conversations are yours. We engineered the entire system around that principle.</p>
+        </div>
+
+        <div class="security-grid">
+          <!-- Main privacy card -->
+          <div class="sec-main-card reveal">
+            <div class="shield-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#secGrad)" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <defs>
+                  <linearGradient id="secGrad" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="1" stop-color="#06B6D4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3>Your data is never used<br/>to train our AI.</h3>
+            <p>We believe privacy is a fundamental right. Every recording, transcript, and note you create belongs exclusively to you. Full stop.</p>
+            <div class="compliance-badges">
+              <div class="comp-badge">GDPR</div>
+              <div class="comp-badge">SOC 2</div>
+              <div class="comp-badge">HIPAA</div>
+              <div class="comp-badge">ISO 27001</div>
+            </div>
+          </div>
+
+          <!-- Security feature cards -->
+          <div class="sec-features">
+            <div class="sec-feat-card reveal reveal-delay">
+              <div class="sec-feat-icon" style="--c:#8B5CF6">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div>
+                <h4>End-to-End Encryption</h4>
+                <p>AES-256 encryption in transit and at rest. Not even our engineers can read your data.</p>
+              </div>
+            </div>
+            <div class="sec-feat-card reveal reveal-delay">
+              <div class="sec-feat-icon" style="--c:#10B981">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <div>
+                <h4>On-Device AI Processing</h4>
+                <p>Sensitive recordings processed locally on your device — never leaves your hands.</p>
+              </div>
+            </div>
+            <div class="sec-feat-card reveal reveal-delay">
+              <div class="sec-feat-icon" style="--c:#3B82F6">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <div>
+                <h4>Privacy First Architecture</h4>
+                <p>Zero-knowledge design. Your transcripts are encrypted before upload — we can't access them.</p>
+              </div>
+            </div>
+            <div class="sec-feat-card reveal reveal-delay">
+              <div class="sec-feat-icon" style="--c:#F59E0B">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div>
+                <h4>Full Data Portability</h4>
+                <p>Export everything, delete everything — anytime. You're always in complete control.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         ABOUT US
+    ============================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-simple reveal">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title about-title">Built by people who sit<br/>in too many meetings.</h2>
+          <p class="about-lead">AI Minute Note is made by Shenzhen Yunduoduo Technology Co., Ltd — a small team focused on making everyday work tools genuinely useful. We built this app because we wanted something that just works: open it, speak, get a clean summary. No fuss.</p>
+
+          <div class="about-pillars">
+            <div class="about-pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Save time</h4>
+                <p>Stop spending time after meetings writing up what was said. Let the app handle it.</p>
+              </div>
+            </div>
+            <div class="about-pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div>
+                <h4>Private by default</h4>
+                <p>Your recordings and transcripts are yours. We don't sell, share, or train on your data.</p>
+              </div>
+            </div>
+            <div class="about-pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <div>
+                <h4>Keep it simple</h4>
+                <p>One button to record. One tap to get your summary. That's it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-meta">
+            <div class="am-item">
+              <span class="am-val">2024</span>
+              <span class="am-lbl">Founded</span>
+            </div>
+            <div class="am-sep"></div>
+            <div class="am-item">
+              <span class="am-val">iOS</span>
+              <span class="am-lbl">Platform</span>
+            </div>
+            <div class="am-sep"></div>
+            <div class="am-item">
+              <span class="am-val">99+</span>
+              <span class="am-lbl">Languages</span>
+            </div>
+            <div class="am-sep"></div>
+            <div class="am-item">
+              <span class="am-val">Free</span>
+              <span class="am-lbl">To Start</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         BLOG
+    ============================== -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Blog</span>
+          <h2 class="section-title">Insights on AI &amp;<br/>Smarter Meetings</h2>
+          <p class="section-sub">Practical guides and deep dives on AI-powered productivity.</p>
+        </div>
+
+        <div class="blog-grid">
+
+          <!-- Post 1 -->
+          <article class="blog-card reveal">
+            <div class="blog-card-top">
+              <div class="blog-cover blog-cover-1">
+                <div class="blog-cover-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="blog-cover-blur"></div>
+              </div>
+              <div class="blog-meta-row">
+                <span class="blog-cat">Productivity</span>
+                <span class="blog-read">5 min read</span>
+              </div>
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-title">How AI Meeting Minutes Save Your Time Every Week</h3>
+              <p class="blog-excerpt">The average professional spends 31 hours per month in meetings — and nearly a quarter of that time is wasted on follow-up tasks that AI can now handle in seconds. Here's exactly where the time goes, and how to get it back.</p>
+              <div class="blog-footer">
+                <div class="blog-tags">
+                  <span>Time Management</span>
+                  <span>AI Tools</span>
+                </div>
+                <a href="#" class="blog-read-more">
+                  Read More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 2 — Featured -->
+          <article class="blog-card blog-card-featured reveal reveal-delay">
+            <div class="blog-card-top">
+              <div class="blog-cover blog-cover-2">
+                <div class="blog-cover-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div class="blog-cover-blur"></div>
+                <div class="blog-featured-badge">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Editor's Pick
+                </div>
+              </div>
+              <div class="blog-meta-row">
+                <span class="blog-cat blog-cat-purple">Comparison</span>
+                <span class="blog-read">12 min read</span>
+              </div>
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-title">Top 10 AI Meeting Minutes Tools in 2026</h3>
+              <p class="blog-excerpt">We tested every major AI note-taking tool on the market — accuracy, speed, privacy, and price. Here's the definitive breakdown, including which tool punches well above its weight class.</p>
+
+              <!-- Mini comparison table -->
+              <div class="blog-compare">
+                <div class="bc-row bc-header">
+                  <span>Tool</span><span>Accuracy</span><span>Languages</span>
+                </div>
+                <div class="bc-row">
+                  <span class="bc-tool">Otter.ai</span>
+                  <span class="bc-val">96%</span>
+                  <span class="bc-val">12</span>
+                </div>
+                <div class="bc-row">
+                  <span class="bc-tool">Fireflies</span>
+                  <span class="bc-val">95%</span>
+                  <span class="bc-val">30+</span>
+                </div>
+                <div class="bc-row bc-row-highlight">
+                  <span class="bc-tool bc-tool-us">
+                    <img src="assets/logo.png" width="14" height="14" style="border-radius:3px;vertical-align:middle;" alt=""/>
+                    AI Minute Note
+                    <span class="bc-badge">Best Value</span>
+                  </span>
+                  <span class="bc-val bc-val-top">99.2%</span>
+                  <span class="bc-val bc-val-top">99+</span>
+                </div>
+                <div class="bc-row">
+                  <span class="bc-tool">Notion AI</span>
+                  <span class="bc-val">93%</span>
+                  <span class="bc-val">20+</span>
+                </div>
+                <div class="bc-row bc-more">
+                  <span>+ 6 more tools in full article →</span>
+                </div>
+              </div>
+
+              <div class="blog-footer">
+                <div class="blog-tags">
+                  <span>Comparison</span>
+                  <span>Reviews</span>
+                </div>
+                <a href="#" class="blog-read-more blog-read-more-purple">
+                  Read Full Review
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-card reveal reveal-delay-2">
+            <div class="blog-card-top">
+              <div class="blog-cover blog-cover-3">
+                <div class="blog-cover-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="blog-cover-blur"></div>
+              </div>
+              <div class="blog-meta-row">
+                <span class="blog-cat blog-cat-teal">Deep Dive</span>
+                <span class="blog-read">8 min read</span>
+              </div>
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-title">How AI Actually Understands the Logic of Your Meetings</h3>
+              <p class="blog-excerpt">It's not just transcription. Modern AI models parse conversational structure — identifying decisions, disagreements, action owners, and timeline anchors — the same way a skilled analyst would. We break down exactly how it works.</p>
+              <div class="blog-footer">
+                <div class="blog-tags">
+                  <span>AI Research</span>
+                  <span>NLP</span>
+                </div>
+                <a href="#" class="blog-read-more blog-read-more-teal">
+                  Read More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         FINAL CTA
+    ============================== -->
+    <section class="final-cta" id="download">
+      <div class="cta-bg">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+      </div>
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Free to Download
+          </div>
+          <h2 class="cta-headline">Ready to Transform<br/>Your Meetings?</h2>
+          <p class="cta-sub">Join thousands of professionals who never take notes by hand anymore.</p>
+          <div class="cta-actions">
+            <a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener" class="app-store-btn app-store-lg">
+              <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <div class="btn-text-block">
+                <span class="download-label">Download on the</span>
+                <span class="store-label">App Store</span>
+              </div>
+            </a>
+            <div class="cta-note">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Free forever plan · No credit card required
+            </div>
+          </div>
+          <div class="cta-reviews">
+            <div class="review-stars">★★★★★</div>
+            <span class="review-text">4.9 / 5 on the App Store · 2,400+ reviews</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo">
+          <div class="logo-icon">
+            <img src="assets/logo.png" alt="AI Minute Note Logo" width="24" height="24" style="display:block;border-radius:4px;" />
+          </div>
+          <span>AI Minute Note</span>
+        </a>
+        <p class="footer-tagline">Your AI Scribe for Every Word.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Twitter/X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener">Download</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Release Notes</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2026 AI Minute Note Inc. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
