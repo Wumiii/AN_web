@@ -721,6 +721,7 @@
   const feedbackForm = document.getElementById('feedbackForm');
   if (feedbackForm) {
     feedbackForm.addEventListener('submit', function (e) {
+      e.preventDefault();
       const btn = document.getElementById('submitBtn');
       let valid = true;
 
@@ -736,13 +737,40 @@
       if (!message.value.trim()) { message.classList.add('error'); valid = false; }
 
       if (!valid) { 
-        e.preventDefault(); 
         return; 
       }
 
       btn.classList.add('sending');
       btn.disabled = true;
       btn.innerHTML = '<span class="btn-spinner"></span> Sending...';
+
+      const formData = new FormData(feedbackForm);
+      
+      fetch(feedbackForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          feedbackForm.style.display = 'none';
+          const successEl = document.getElementById('feedbackSuccess');
+          if (successEl) successEl.style.display = 'block';
+        } else {
+          btn.classList.remove('sending');
+          btn.disabled = false;
+          btn.innerHTML = 'Send Feedback';
+          alert('Failed to send feedback. Please try again.');
+        }
+      })
+      .catch(error => {
+        btn.classList.remove('sending');
+        btn.disabled = false;
+        btn.innerHTML = 'Send Feedback';
+        alert('Failed to send feedback. Please try again.');
+      });
     });
 
     if (window.location.search.includes('sent=1')) {
