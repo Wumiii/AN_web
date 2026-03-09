@@ -481,7 +481,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border);
 }
 .qr-code-wrap img {
-  width: 150px;
+  width: 120px;
   height: auto;
   display: block;
 }
