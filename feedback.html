@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback — AI Minute Note</title>
+  <meta name="description" content="Share your feedback, report a bug, or request a feature. We'd love to hear from you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="feedback-page">
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <img src="assets/logo.png" alt="AI Minute Note Logo" width="26" height="26" style="display:block;border-radius:4px;" />
+        </div>
+        <span>AI Minute Note</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8 12l2 2 4-4"/></svg>
+          Download Free
+        </a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#about">About</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:8px">Download Free</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="feedback-section">
+      <!-- Background -->
+      <div class="feedback-bg">
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        <div class="noise-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="feedback-layout">
+
+          <!-- Left: Info -->
+          <div class="feedback-info reveal">
+            <span class="section-tag">Feedback</span>
+            <h1 class="feedback-headline">We'd Love to<br/>Hear From You</h1>
+            <p class="feedback-desc">Your feedback shapes AI Minute Note. Whether it's a bug report, feature request, or a compliment — every message is read by our team.</p>
+
+            <div class="feedback-channels">
+              <div class="feedback-channel">
+                <div class="fc-ch-icon" style="--c:#8B5CF6">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div>
+                  <h4>General Feedback</h4>
+                  <p>Share thoughts on your experience or suggest improvements.</p>
+                </div>
+              </div>
+              <div class="feedback-channel">
+                <div class="fc-ch-icon" style="--c:#EF4444">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div>
+                  <h4>Bug Report</h4>
+                  <p>Found something broken? Let us know so we can fix it fast.</p>
+                </div>
+              </div>
+              <div class="feedback-channel">
+                <div class="fc-ch-icon" style="--c:#10B981">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <h4>Feature Request</h4>
+                  <p>Have an idea for a new feature? We prioritize by user demand.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="feedback-form-wrap reveal reveal-delay">
+            <form
+              id="feedbackForm"
+              action="https://formsubmit.co/support@aiminutenote.com"
+              method="POST"
+              class="feedback-form"
+            >
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_subject" value="AI Minute Note — New Feedback" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" style="display:none" />
+              <input type="hidden" name="_next" value="feedback.html?sent=1" />
+
+              <div class="form-header">
+                <h2 class="form-title">Send Feedback</h2>
+                <p class="form-subtitle">All fields marked with * are required.</p>
+              </div>
+
+              <!-- Name -->
+              <div class="form-group">
+                <label for="userName" class="form-label">Name *</label>
+                <div class="form-input-wrap">
+                  <svg class="form-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input type="text" id="userName" name="Name" required placeholder="Your name" class="form-input" />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="userEmail" class="form-label">Email *</label>
+                <div class="form-input-wrap">
+                  <svg class="form-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <input type="email" id="userEmail" name="Email" required placeholder="you@example.com" class="form-input" />
+                </div>
+              </div>
+
+              <!-- Feedback Type -->
+              <div class="form-group">
+                <label class="form-label">Feedback Type *</label>
+                <div class="form-type-grid">
+                  <label class="form-type-option">
+                    <input type="radio" name="Type" value="General Feedback" checked />
+                    <span class="form-type-card">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      General
+                    </span>
+                  </label>
+                  <label class="form-type-option">
+                    <input type="radio" name="Type" value="Bug Report" />
+                    <span class="form-type-card">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Bug
+                    </span>
+                  </label>
+                  <label class="form-type-option">
+                    <input type="radio" name="Type" value="Feature Request" />
+                    <span class="form-type-card">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      Feature
+                    </span>
+                  </label>
+                  <label class="form-type-option">
+                    <input type="radio" name="Type" value="Question" />
+                    <span class="form-type-card">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                      Question
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Device & App Version -->
+              <div class="form-row">
+                <div class="form-group form-half">
+                  <label for="userDevice" class="form-label">Device</label>
+                  <div class="form-input-wrap">
+                    <svg class="form-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <input type="text" id="userDevice" name="Device" placeholder="e.g. iPhone 16 Pro" class="form-input" />
+                  </div>
+                </div>
+                <div class="form-group form-half">
+                  <label for="appVersion" class="form-label">App Version</label>
+                  <div class="form-input-wrap">
+                    <svg class="form-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <input type="text" id="appVersion" name="App Version" placeholder="e.g. 2.1.0" class="form-input" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="userMessage" class="form-label">Message *</label>
+                <textarea id="userMessage" name="Message" required rows="5" placeholder="Please describe your feedback in detail..." class="form-textarea"></textarea>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="form-submit-btn" id="submitBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Feedback
+              </button>
+
+              <p class="form-privacy-note">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Your information is secure and will only be used to respond to your feedback.
+              </p>
+            </form>
+
+            <!-- Success State (hidden by default) -->
+            <div class="feedback-success" id="feedbackSuccess" style="display:none">
+              <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h2 class="success-title">Thank You!</h2>
+              <p class="success-desc">Your feedback has been sent successfully. We'll review it and get back to you if needed.</p>
+              <a href="index.html" class="btn btn-primary" style="margin-top:20px">Back to Home</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo footer-logo">
+          <div class="logo-icon">
+            <img src="assets/logo.png" alt="AI Minute Note Logo" width="24" height="24" style="display:block;border-radius:4px;" />
+          </div>
+          <span>AI Minute Note</span>
+        </a>
+        <p class="footer-tagline">Your AI Scribe for Every Word.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="https://apps.apple.com/us/app/ai-minute-note-smart-notebook/id6752681926" target="_blank" rel="noopener">Download</a></li>
+          <li><a href="index.html#features">Features</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Blog</h5>
+        <ul>
+          <li><a href="blog/ai-meeting-10-hours.html">10 Hours a Week</a></li>
+          <li><a href="blog/ai-strategic-logic.html">Strategic Logic</a></li>
+          <li><a href="blog/2025-global-guide.html">2025 Global Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="policy/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="policy/terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2026 AI Minute Note Inc. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="policy/privacy-policy.html">Privacy</a>
+          <a href="policy/terms-of-service.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

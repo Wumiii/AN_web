@@ -1,0 +1,201 @@
+Terms of Service
+
+AI Minute Note: Smart Notebook
+
+Last updated: March 2026
+
+These Terms of Service ("Terms") govern your access to and use of the AI Minute Note: Smart Notebook application and related services (collectively, the "Service").
+
+By downloading, accessing, or using the Service, you agree to be bound by these Terms. If you do not agree with these Terms, please discontinue use of the Service.
+
+1. Description of the Service
+
+AI Minute Note: Smart Notebook is an AI-powered note-taking and summarization application that allows users to:
+
+Record audio notes
+
+Upload audio or document files
+
+Convert speech into text
+
+Generate AI-powered summaries and structured notes
+
+The Service uses artificial intelligence technologies to process user content and generate summaries and insights.
+
+2. Account and Login
+
+Certain features of the Service may require users to sign in using supported authentication methods such as:
+
+Sign in with Apple
+
+Google Sign-In
+
+You are responsible for maintaining the security of your account and for all activities that occur under your account.
+
+You agree to provide accurate and current information when accessing the Service.
+
+3. User Content
+3.1 Content You Provide
+
+When using the Service, you may upload or submit content including but not limited to:
+
+Audio recordings
+
+Files
+
+Text inputs
+
+("User Content")
+
+You retain ownership of your User Content.
+
+By submitting content, you grant the Service a limited license to process, store, and analyze your content solely for the purpose of providing the Service.
+
+You confirm that:
+
+You have the legal right to upload the content
+
+Your content does not violate the rights of any third party
+
+3.2 AI Generated Content
+
+The Service generates summaries, notes, and other outputs using artificial intelligence technologies.
+
+You acknowledge that:
+
+AI-generated results may not always be accurate or complete
+
+Generated content is provided for informational purposes only
+
+AI output should not be considered professional advice
+
+Users are responsible for reviewing and verifying AI-generated results before relying on them.
+
+4. Third-Party Services
+
+To provide certain features, the Service integrates third-party technologies including:
+
+AssemblyAI for speech-to-text transcription
+
+Google Gemini AI models for AI-powered summarization and analysis
+
+Apple Sign-In and Google Sign-In for authentication services
+
+Your content may be transmitted to these services solely for the purpose of providing functionality.
+
+These third-party services operate under their own privacy policies and terms.
+
+5. Acceptable Use
+
+You agree not to use the Service to:
+
+Upload illegal, harmful, or infringing content
+
+Upload malware, viruses, or malicious code
+
+Attempt to reverse engineer or copy the Service
+
+Use automated tools such as bots or scripts to access the Service
+
+Share or resell access to the Service
+
+Use the Service for unlawful purposes
+
+Violation of these rules may result in suspension or termination of your access.
+
+6. Subscriptions and Payments
+6.1 Subscription Plans
+
+AI Minute Note: Smart Notebook offers optional auto-renewable subscriptions that unlock premium features.
+
+Available plans may include:
+
+Weekly Subscription — $9.99 per week
+
+Yearly Subscription — $99.99 per year after a 3-day free trial
+
+Prices may vary depending on your region and will be shown in the App Store before purchase.
+
+6.2 Billing and Auto-Renewal
+
+Payment will be charged to your Apple ID account when the purchase is confirmed.
+
+Subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.
+
+Your account will be charged for renewal within 24 hours prior to the end of the current subscription period.
+
+You can manage or cancel subscriptions through your Apple ID account settings.
+
+6.3 Free Trial
+
+Certain subscription plans may include a 3-day free trial.
+
+If you do not cancel the subscription before the trial period ends, the subscription will automatically convert to a paid subscription.
+
+Any unused portion of a free trial period may be forfeited if a subscription is purchased.
+
+6.4 Refunds
+
+All purchases and subscriptions are processed by the Apple App Store.
+
+Refund requests must be submitted directly to Apple and are subject to Apple's refund policies.
+
+7. Intellectual Property
+
+All rights related to the Service, including software, algorithms, design, and branding, are protected by applicable intellectual property laws.
+
+You may not reproduce, distribute, modify, or create derivative works from the Service without permission.
+
+8. Service Availability
+
+The Service may occasionally be unavailable due to maintenance, updates, or technical issues.
+
+There is no guarantee that the Service will be uninterrupted or error-free.
+
+The Service may be modified or discontinued at any time.
+
+9. Disclaimer
+
+The Service is provided "as is" and "as available".
+
+We do not guarantee that:
+
+AI transcription or summaries will be fully accurate
+
+the Service will always be available
+
+the results will meet your expectations
+
+Use of the Service is at your own risk.
+
+10. Limitation of Liability
+
+To the maximum extent permitted by law, the Service will not be liable for:
+
+inaccuracies in AI-generated content
+
+loss of user data
+
+service interruptions
+
+indirect or consequential damages
+
+11. Termination
+
+Access to the Service may be suspended or terminated if:
+
+you violate these Terms
+
+you engage in abusive or illegal activity
+
+Upon termination, your right to use the Service will immediately cease.
+
+12. Changes to These Terms
+
+These Terms may be updated from time to time. Continued use of the Service after updates indicates acceptance of the revised Terms.
+
+13. Contact
+
+If you have questions about these Terms, please contact:
+
+Email: support@aiminutenote.com

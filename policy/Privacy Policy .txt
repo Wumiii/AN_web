@@ -1,0 +1,249 @@
+Privacy Policy
+
+AI Minute Note: Smart Notebook
+
+Effective Date: March 2026
+
+AI Minute Note: Smart Notebook (“we”, “our”, or “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, and safeguard your information when you use our mobile application.
+
+By using AI Minute Note: Smart Notebook, you agree to the practices described in this Privacy Policy.
+
+1. Information We Collect
+
+We may collect the following types of information when you use the App.
+
+1.1 Account Information
+
+When you sign in using Apple Sign-In or Google Sign-In, we may receive:
+
+Name
+
+Email address
+
+Account identifier
+
+This information is used to:
+
+Create and manage your account
+
+Provide app services
+
+Communicate with you if necessary
+
+We do not receive or store your Apple or Google account passwords.
+
+1.2 Audio and File Content
+
+When using the recording or upload features, the App may process:
+
+Audio recordings
+
+Uploaded audio files
+
+Uploaded document files
+
+Speech content contained in recordings
+
+These files are used to provide:
+
+Speech transcription
+
+AI-generated summaries
+
+Note organization features
+
+1.3 AI-Generated Content
+
+Based on the content you provide, the App may generate:
+
+Transcriptions
+
+Meeting notes
+
+Summaries
+
+Structured notes
+
+This content is generated automatically using artificial intelligence technologies.
+
+1.4 Usage Information
+
+We may collect limited usage information to improve the App, such as:
+
+Feature usage
+
+App performance data
+
+Error logs
+
+This information helps us improve stability and user experience.
+
+1.5 Device Information
+
+We may collect basic device information including:
+
+Device type
+
+Operating system version
+
+App version
+
+IP address (for security and service delivery)
+
+2. How We Use Your Information
+
+We use the collected information to:
+
+Provide audio transcription services
+
+Generate AI summaries and notes
+
+Maintain and improve the App
+
+Provide customer support
+
+Manage subscriptions
+
+Ensure service security and stability
+
+We do not sell your personal information to third parties.
+
+3. AI Processing and Third-Party Services
+
+To provide transcription and AI summarization features, we use trusted third-party service providers.
+
+3.1 AssemblyAI
+
+Audio recordings may be processed by AssemblyAI to generate speech-to-text transcripts.
+
+AssemblyAI processes audio solely to provide transcription services.
+
+3.2 Google Gemini
+
+Text content and transcripts may be processed using Google Gemini AI models to generate summaries and structured notes.
+
+The AI processing is used solely to provide features requested by the user.
+
+3.3 Authentication Providers
+
+Users may sign in using:
+
+Sign in with Apple
+
+Google Sign-In
+
+Authentication is handled securely by these providers.
+
+4. Data Sharing
+
+We do not sell, rent, or trade your personal information.
+
+We may share information only in the following situations:
+
+With trusted service providers required to operate the App (such as transcription or AI processing services)
+
+When required by law or legal process
+
+To protect the safety, rights, or property of users or the service
+
+All service providers are required to handle data securely and only process data as necessary to provide their services.
+
+5. Data Retention
+
+We retain user data only as long as necessary to provide services or comply with legal obligations.
+
+Users may request deletion of their data at any time.
+
+Audio files, transcripts, and generated notes may be stored to allow users to access their history unless deleted by the user.
+
+6. User Rights
+
+Depending on your region, you may have the right to:
+
+Access your personal information
+
+Request correction of inaccurate information
+
+Request deletion of your data
+
+Withdraw consent for certain data uses
+
+Request restriction of processing
+
+To exercise these rights, please contact us using the email provided below.
+
+7. Data Security
+
+We take reasonable technical and organizational measures to protect your information, including:
+
+Encryption of data during transmission (HTTPS)
+
+Secure storage systems
+
+Access controls limiting who can access data
+
+Service monitoring and security practices designed to prevent unauthorized access
+
+While we take reasonable measures to protect your data, no digital service can guarantee absolute security.
+
+8. GDPR and European Economic Area (EEA) Rights
+
+If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, you may have additional rights under the General Data Protection Regulation (GDPR).
+
+These rights may include:
+
+The right to access your personal data
+
+The right to request correction of inaccurate data
+
+The right to request deletion of your personal data
+
+The right to restrict or object to certain processing activities
+
+The right to data portability
+
+The right to withdraw consent at any time
+
+We process personal data only when we have a lawful basis to do so, including:
+
+Providing the services requested by the user
+
+Improving and maintaining the functionality of the App
+
+Complying with legal obligations
+
+If you wish to exercise your GDPR rights, please contact us using the email provided in the Contact section.
+
+9. Subscriptions
+
+AI Minute Note: Smart Notebook offers optional subscriptions.
+
+Available plans may include:
+
+Weekly subscription ($9.99)
+
+Annual subscription ($99.99) with a 3-day free trial
+
+Subscriptions are managed through your Apple App Store account.
+
+Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.
+
+Users can manage or cancel subscriptions in their App Store account settings.
+
+10. Children's Privacy
+
+Our App is not intended for children under the age of 13.
+
+We do not knowingly collect personal information from children. If we become aware that such data has been collected, we will take steps to delete it.
+
+11. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time.
+
+When changes occur, we will update the Effective Date at the top of this page. Continued use of the App after changes indicates acceptance of the updated policy.
+
+12. Contact Us
+
+If you have questions about this Privacy Policy or your data, please contact us:
+
+Email: support@aiminutenote.com
