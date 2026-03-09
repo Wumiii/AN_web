@@ -110,7 +110,7 @@ We do not sell your personal information to third parties.
 
 3. AI Processing and Third-Party Services
 
-To provide transcription and AI summarization features, we use trusted third-party service providers.
+To provide transcription and AI summarization features, we use trusted third-party service providers. These providers may process data solely for the purpose of delivering the requested services.
 
 3.1 AssemblyAI
 
@@ -118,13 +118,28 @@ Audio recordings may be processed by AssemblyAI to generate speech-to-text trans
 
 AssemblyAI processes audio solely to provide transcription services.
 
+AssemblyAI Privacy Policy:
+https://www.assemblyai.com/legal/privacy-policy
+
 3.2 Google Gemini
 
 Text content and transcripts may be processed using Google Gemini AI models to generate summaries and structured notes.
 
 The AI processing is used solely to provide features requested by the user.
 
-3.3 Authentication Providers
+Google Privacy Policy:
+https://policies.google.com/privacy
+
+3.3 ByteDance AI Services
+
+Certain AI processing features may utilize ByteDance AI technologies to assist with language processing and content analysis.
+
+These services are used only to provide requested app functionality.
+
+ByteDance Privacy Policy:
+https://sf16-sg.tiktokcdn.com/obj/eden-sg/upsnuhpevbn/bytedance_official/PrivacyPolicy_ByteDance.com.pdf
+
+3.4 Authentication Providers
 
 Users may sign in using:
 
@@ -229,6 +244,11 @@ Subscriptions are managed through your Apple App Store account.
 Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.
 
 Users can manage or cancel subscriptions in their App Store account settings.
+
+For detailed subscription terms and conditions, please review:
+
+Subscription Terms:
+https://aiminutenote.vercel.app/policy/subscription.html
 
 10. Children's Privacy
 
