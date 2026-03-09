@@ -736,20 +736,33 @@
       if (!message.value.trim()) { message.classList.add('error'); valid = false; }
 
       if (!valid) { 
-        e.preventDefault(); 
         return; 
       }
 
+      e.preventDefault();
+      
       btn.classList.add('sending');
       btn.disabled = true;
       btn.innerHTML = '<span class="btn-spinner"></span> Sending...';
-    });
 
-    if (window.location.search.includes('sent=1')) {
-      feedbackForm.style.display = 'none';
-      var successEl = document.getElementById('feedbackSuccess');
-      if (successEl) successEl.style.display = 'block';
-    }
+      const formData = new FormData(feedbackForm);
+      
+      fetch(feedbackForm.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        feedbackForm.style.display = 'none';
+        const successEl = document.getElementById('feedbackSuccess');
+        if (successEl) successEl.style.display = 'block';
+      })
+      .catch(() => {
+        btn.classList.remove('sending');
+        btn.disabled = false;
+        btn.innerHTML = 'Send Feedback';
+      });
+    });
   }
 
   /* ============================================================
